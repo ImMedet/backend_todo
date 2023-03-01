@@ -3,7 +3,6 @@ package kz.medet.backend.controller;
 import kz.medet.backend.model.User;
 import kz.medet.backend.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -55,9 +54,14 @@ public class ClientController {
 
     //Get User by ID
 
-    @GetMapping("user/{id}")
+    @GetMapping("/user/{id}")
     public User getUserById(@PathVariable("id") long id){
         return userService.getUserById(id);
+    }
+
+    @GetMapping("/test")
+    public String getTest(@RequestParam("text") String text) {
+        return userService.getText(text);
     }
 
 }

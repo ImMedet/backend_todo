@@ -43,4 +43,9 @@ public class UserServiceImpl implements UserService {
         user1.setPNo(user.getPNo());
         return userRepository.save(user1);
     }
+
+    @Override
+    public String getText(String text) {
+        return text;
+    }
 }

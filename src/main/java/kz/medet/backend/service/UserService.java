@@ -26,4 +26,6 @@ public interface UserService {
     //update user by id
     public User updateUser(User user, long id);
 
+    String getText(String text);
+
 }
