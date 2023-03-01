@@ -44,8 +44,4 @@ public class UserServiceImpl implements UserService {
         return userRepository.save(user1);
     }
 
-    @Override
-    public String getText(String text) {
-        return text;
-    }
 }

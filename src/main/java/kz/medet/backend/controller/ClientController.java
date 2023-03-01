@@ -59,9 +59,4 @@ public class ClientController {
         return userService.getUserById(id);
     }
 
-    @GetMapping("/test/t")
-    public String getTest(@RequestParam("text") String text) {
-        return userService.getText(text);
-    }
-
 }
